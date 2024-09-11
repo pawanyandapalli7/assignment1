@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Data Collector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        form, #dataDisplay {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="file"] {
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        #dataDisplay div {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        #dataDisplay div:last-child {
+            border-bottom: none;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Agricultural Data Collector</h1>
+    
+    <form id="dataForm">
+        <label for="sensorReading">Sensor Reading:</label>
+        <input type="text" id="sensorReading" placeholder="e.g., temperature,humidity,soil moisture" required>
+        
+        <label for="imageUpload">Crop Photo:</label>
+        <input type="file" id="imageUpload" accept="image/*">
+        
+        <label for="notes">Farmer Notes:</label>
+        <textarea id="notes" placeholder="Additional observations or descriptions" rows="4"></textarea>
+        
+        <button type="submit">Save Data</button>
+    </form>
+
+    <h2>Collected Data</h2>
+    <div id="dataDisplay"></div>
+
+    <script src="lab_1_indexeddb.js"></script>
+</body>
+</html>
